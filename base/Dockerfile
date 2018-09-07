@@ -1,4 +1,4 @@
-FROM binpar/dockerimages:base
+FROM ubuntu:18.04
 
 ENV TMP_DIR /tmp
 COPY scripts $TMP_DIR

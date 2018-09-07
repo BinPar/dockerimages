@@ -1,5 +1,4 @@
 FROM binpar/dockerimages:node8
-MAINTAINER BinPar Team S.L.
 
 # See https://crbug.com/795759
 RUN apt-get update && apt-get install -yq libgconf-2-4
