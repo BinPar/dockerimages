@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM alpine:latest
 
 ENV TMP_DIR /tmp
 COPY scripts $TMP_DIR
