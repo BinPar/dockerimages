@@ -1,4 +1,4 @@
 set -e
 
-bash $TMP_DIR/install_node_8.sh
-bash $TMP_DIR/cleanup.sh
+sh $TMP_DIR/install_node_8.sh
+sh $TMP_DIR/cleanup.sh
