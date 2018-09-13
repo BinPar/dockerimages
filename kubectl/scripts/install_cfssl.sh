@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 apt-get update
 apt-get install openssl ca-certificates -y
 wget https://pkg.cfssl.org/R1.2/cfssl_linux-amd64
