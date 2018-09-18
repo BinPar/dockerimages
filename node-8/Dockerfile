@@ -5,4 +5,4 @@ COPY scripts $TMP_DIR
 
 RUN sh $TMP_DIR/init.sh
 
-CMD ["/bin/sh"]
+CMD [ "/bin/sh" ]
