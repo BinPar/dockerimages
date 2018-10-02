@@ -1,4 +1,4 @@
-FROM node:10
+FROM node:8
 LABEL name="node-chrome"
 
 # Install Chrome
