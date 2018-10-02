@@ -23,4 +23,5 @@ RUN set -x \
 
 COPY scripts /tmp
 
-RUN sh /tmp/run_app.sh
+EXPOSE 80
+RUN /tmp/run_app.sh
