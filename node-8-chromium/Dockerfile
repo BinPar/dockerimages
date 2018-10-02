@@ -1,7 +1,7 @@
-FROM binpar/dockerimages:node8
+FROM node:10
+LABEL name="node-chrome"
 
-# See https://crbug.com/795759
-RUN apt-get update && apt-get install -yq libgconf-2-4
+# Install Chrome
 
 RUN echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' > /etc/apt/sources.list.d/chrome.list
 
