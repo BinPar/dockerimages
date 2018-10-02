@@ -7,5 +7,4 @@ if [ -d /bundle ]; then
   npm start
 else
   echo "=> You don't have a node app to run in this image."
-  exit 1
 fi
