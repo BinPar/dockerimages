@@ -20,3 +20,7 @@ RUN set -x \
     && node -v \
     && npm -v \
     && google-chrome --version
+
+COPY scripts /tmp
+
+RUN sh /tmp/run_app.sh
