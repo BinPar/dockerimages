@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-apt-get update -y
-apt-get -y upgrade
+sudo apt-get update -y
+sudo apt-get -y upgrade
 
-apt-get install -y ghostscript
+sudo apt-get install -y ghostscript
