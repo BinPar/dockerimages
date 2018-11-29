@@ -46,4 +46,4 @@ COPY scripts $METEORD_DIR
 
 EXPOSE 80
 
-ENTRYPOINT [ "bash", "${METEORD_DIR}/run_app.sh" ]
+ENTRYPOINT bash $METEORD_DIR/run_app.sh
