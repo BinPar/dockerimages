@@ -1,27 +1,12 @@
-FROM node:8
+FROM alekzonder/puppeteer:latest
 LABEL name="node-chrome"
 
-# Install Chrome
+ENV METEORD_DIR /opt/app
 
-RUN echo 'deb http://dl.google.com/linux/chrome/deb/ stable main' > /etc/apt/sources.list.d/chrome.list
+COPY scripts $METEORD_DIR
 
-RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-
-RUN set -x \
-    && apt-get update \
-    && apt-get install -y \
-        google-chrome-stable
-
-ENV CHROME_BIN /usr/bin/google-chrome
-
-# Log versions
-
-RUN set -x \
-    && node -v \
-    && npm -v \
-    && google-chrome --version
-
-COPY scripts /tmp
+RUN bash $METEORD_DIR/init.sh
 
 EXPOSE 80
-RUN /tmp/run_app.sh
+
+ENTRYPOINT [ "bash", "${METEORD_DIR}/run_app.sh" ]
